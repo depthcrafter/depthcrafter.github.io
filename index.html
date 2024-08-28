@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description"
+          content=".">
+    <meta name="keywords" content="DepthCrafter, video depth estimation, monocular depth estimation, video, depth, open-world">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DepthCrafter</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="./static/css/twentytwenty.css">
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="icon" href="./img/logo.png">
+
+
+    <script src="./static/js/jquery-3.2.1.min.js"></script>
+    <script src="./static/js/jquery.event.move.js"></script>
+    <script src="./static/js/jquery.twentytwenty.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/fontawesome.all.min.js"></script>
+</head>
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LKCDBW8851"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-LKCDBW8851');
+</script>
+
+
+<body>
+
+
+<section class="hero teaser">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column has-text-centered ">
+                    <img src="img/logo.png" style="height:300px"></img>
+                    <h1 class="title is-1 publication-title">
+                        Repurposing Video Diffusion Models for Open-world Video Depth Estimation
+                    </h1>
+<!--                    <h2 class="title publication-title is-4 has-text-grey"> ICCV 2023 (Oral, Best Paper Finalist)</h2>-->
+                    <h2 class="title publication-title is-4 has-text-grey"> arXiv 2024</h2>
+                    <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://wbhu.github.io">Wenbo Hu</a><sup>1* &dagger;</sup> </span>
+                        <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=qgdesEcAAAAJ&hl=en">Xiangjun Gao</a><sup>2*</sup></span>
+                        <span class="author-block">
+              <a href="https://xiaoyu258.github.io">Xiaoyu Li</a><sup>1* &dagger;</sup>
+            </span>
+                        <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=tZ3dS3MAAAAJ&hl=en">Sijie Zhao</a><sup>1</sup>
+            </span>
+
+                        <span class="author-block">
+              <a href="https://vinthony.github.io/academic">Xiaodong Cun</a><sup>1</sup>
+            </span>
+                        <br>
+
+                        <span class="author-block">
+              <a href="https://yzhang2016.github.io">Yong Zhang</a><sup>1</sup>
+            </span>
+
+                        <span class="author-block">
+              <a href="https://home.cse.ust.hk/~quan">Long Quan</a><sup>2</sup>
+            </span>
+                        <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=4oXBp9UAAAAJ&hl=en">Ying Shan</a><sup>1</sup>
+            </span>
+                    </div>
+
+                    <div class="is-size-5 publication-authors">
+                        <span class="author-block"><sup>1</sup>Tencent AI Lab</span>
+                        <span class="author-block"><sup>2</sup>The Hong Kong University of Science and Technology</span>
+                    </div>
+
+                    <div class="column has-text-centered">
+                        <div class="publication-links">
+                            <!-- PDF Link. -->
+                            <span class="link-block">
+                <a href="pdf/DepthCrafter.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+                            <span class="link-block">
+                <a href="https://arxiv.org/abs/xxxx.xxxxx"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+                            <!--                            &lt;!&ndash; Video Link. &ndash;&gt;-->
+                            <!--                            <span class="link-block">-->
+                            <!--                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"-->
+                            <!--                   class="external-link button is-normal is-rounded is-dark">-->
+                            <!--                  <span class="icon">-->
+                            <!--                      <i class="fab fa-youtube"></i>-->
+                            <!--                  </span>-->
+                            <!--                  <span>Video</span>-->
+                            <!--                </a>-->
+                            <!--              </span>-->
+                            <!-- Code Link. -->
+                            <span class="link-block">
+                <a href="https://github.com/wbhu/xxx"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+                            <!--                            &lt;!&ndash; Dataset Link. &ndash;&gt;-->
+                            <!--                            <span class="link-block">-->
+                            <!--                <a href="https://github.com/google/nerfies/releases/tag/0.1"-->
+                            <!--                   class="external-link button is-normal is-rounded is-dark">-->
+                            <!--                  <span class="icon">-->
+                            <!--                      <i class="far fa-images"></i>-->
+                            <!--                  </span>-->
+                            <!--                  <span>Data</span>-->
+                            <!--                  </a>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="hero teaser is-light is-small">
+    <div class="hero-body">
+        <div class="container" style="text-align: left; ">
+            <div id="results-carousel-horizontal" class="carousel results-carousel">
+
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="./video/bus.mp4" type="video/mp4">
+                </video>
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="./video/car-turn.mp4" type="video/mp4">
+                </video>
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="./video/bus.mp4" type="video/mp4">
+                </video>
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="./video/car-turn.mp4" type="video/mp4">
+                </video>
+
+            </div>
+
+            <div class="content has-text-justified" style="margin-top: 15px;">
+                We innovate <b>DepthCrafter</b>, a novel approach for open-world video depth estimation, by repurposing video diffusion models. It
+                can produce temporally consistent high-quality depth sequences for videos of arbitrary length, without requiring any additional information
+                such as camera poses or optical flow.
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+<script>
+    $(window).on('load', function() {
+        bulmaCarousel.attach('#results-carousel-horizontal', {
+            slidesToScroll: 1,
+            slidesToShow: 1,
+            loop: true,
+            autoplay: true,
+        });
+
+        bulmaCarousel.attach('#results-carousel-vertical', {
+            slidesToScroll: 1,
+            slidesToShow: 1,
+            loop: true,
+            autoplay: true,
+        });
+
+    });
+</script>
+
+
+<!--<section class="section">-->
+<!--    <div class="container is-max-desktop">-->
+<!--        &lt;!&ndash; Abstract. &ndash;&gt;-->
+<!--        <div class="columns is-centered has-text-centered">-->
+<!--            <div class="column is-four-fifths">-->
+<!--                <h2 class="title is-3">Abstract</h2>-->
+<!--                <div class="content has-text-justified">-->
+<!--                    <p>-->
+<!--                        Despite significant progress in monocular depth estimation for static images,-->
+<!--                        open-domain video depth estimation remains extremely challenging due to the temporal consistency,-->
+<!--                        difficulties in estimating camera pose, variable content type and video length.-->
+
+<!--                        We present DepthCrafter, an innovative method for estimating temporally consistent high-quality depth sequences for open-domain monocular videos of arbitrary length,-->
+<!--                        without requiring any additional information such as camera poses or optical flow.-->
+<!--                        %-->
+<!--                        DepthCrafter repurposes an image-to-video diffusion model to a video-to-depth model by fine-tuning a pre-trained model using carefully compiled paired RGB and depth sequence datasets in both synthetic and realistic styles, which harvests both precise depth details and variety of video content.-->
+<!--                        %-->
+<!--                        A two-stage training strategy is designed to provide a long temporal context for precise depth estimation, while an inference strategy stitches multiple estimated depth sequences together, enabling depth estimation for videos of arbitrary length.-->
+<!--                        %-->
+<!--                        Extensive evaluations on multiple datasets demonstrate that DepthCrafter achieves state-of-the-art performance of zero-shot video depth estimation in open-domain.-->
+<!--                        %-->
+<!--                        Furthermore, DepthCrafter facilitates various downstream applications such as \TODO{video editing, visual effects, novel view synthesis, and conditional video generation}.-->
+<!--                    </p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;/ Abstract. &ndash;&gt;-->
+
+<!--        &lt;!&ndash;         Paper video.&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="columns is-centered has-text-centered">&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="column is-four-fifths">&ndash;&gt;-->
+<!--&lt;!&ndash;                <h2 class="title is-3">Video</h2>&ndash;&gt;-->
+<!--&lt;!&ndash;                <div class="publication-video">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <iframe src="https://www.youtube.com/embed/eBgoul4F148"&ndash;&gt;-->
+<!--&lt;!&ndash;                            title="Tri-MipRF: Tri-Mip Representation for Efficient Anti-Aliasing Neural Radiance Fields"&ndash;&gt;-->
+<!--&lt;!&ndash;                            frameborder="0"&ndash;&gt;-->
+<!--&lt;!&ndash;                            allow="autoplay; encrypted-media; gyroscope; picture-in-picture; web-share"&ndash;&gt;-->
+<!--&lt;!&ndash;                            allowfullscreen></iframe>&ndash;&gt;-->
+<!--&lt;!&ndash;                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--    </div>-->
+<!--</section>-->
+
+
+<br><br><br>
+
+<section class="hero teaser">
+    <div class="hero-body">
+        <!-- Method. -->
+        <div class="columns is-centered has-text-centered">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-three-fifths" style=" margin-top: 30px; margin-bottom: 20px;">
+                    <h2 class="title is-3">Brief introduction</h2>
+                    <div class="content has-text-justified">
+
+                        <b>Motivation.</b>
+                        Despite significant progress in monocular depth estimation for static images, open-domain video depth estimation remains extremely challenging due to the temporal consistency, difficulties in estimating camera pose, variable content type and video length.
+
+                        We present DepthCrafter, an innovative method for estimating temporally consistent high-quality depth sequences for open-domain monocular videos of arbitrary length, without requiring any additional information such as camera poses or optical flow.
+
+                        DepthCrafter repurposes an image-to-video diffusion model to a video-to-depth model by fine-tuning a pre-trained model using carefully compiled paired RGB and depth sequence datasets in both synthetic and realistic styles, which harvests both precise depth details and variety of video content.
+
+                        A two-stage training strategy is designed to provide a long temporal context for precise depth estimation, while an inference strategy stitches multiple estimated depth sequences together, enabling depth estimation for videos of arbitrary length.
+
+                        <div class="hero-body" style="margin-top: 40px; margin-bottom: -30px;">
+                            <img id="overview" width="90%" src="./img/overview.jpg"/>
+                        </div>
+                        <b>Overview.</b>
+                        DepthCrafter is a conditional diffusion generation model that models the distribution $p(\mathbf{d} \, | \, \mathbf{v})$ over the depth sequence $\mathbf{d}$ conditioned on the input video $\mathbf{v}$.
+                        The model is trained on paried video-depth datasets via the denoising score matching.
+                        During inference, given an open-world monocular video, it can generate temporally consistent high-quality depth sequences for the entire video from initialize Gaussian noise,
+                        without requiring any other information, \eg, camera poses, optical flow, \etc.
+
+                        <div class="hero-body" style="margin-top: 40px; margin-bottom: -30px;">
+                            <img id="inference" width="40%" src="./img/inference.jpg"/>
+                        </div>
+                        <b>Inference for videos of arbitrary lengths.</b>
+                         We divide the video into overlapped segments and estimate the depth sequences for each segment with a carefully designed noise initialization strategy to anchor the scale
+                        and shift of depth distributions. We further craft a mortise-and-tenon style latent interpolation strategy to stitch consecutive segments together seamlessly.
+                        The overlapped frames are denoted as ${o}_i$ and the interpolation weights for each frame are denoted as ${w}_i$ and $1-{w}_{i}$, respectively.
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!--/ Method. -->
+    </div>
+</section>
+
+
+<section class="hero teaser is-light is-small">
+    <div class="hero-body">
+
+        <div class="container" style="text-align: center; ">
+            <h2 class="title is-3">Comparison with Depth-Anything-V2 </h2>
+            <div id="comparison-carousel-horizontal" class="carousel results-carousel">
+
+                <div class="twoitem">
+                    <video muted autoplay="autoplay" loop="loop" width="100%">
+                        <source src="./video/horsejump-high.mp4" type="video/mp4">
+                    </video>
+                    <div class="twentytwenty-container twentytwenty-container-bottom">
+                        <div class="cmpcontent">
+                            <video muted autoplay="autoplay" loop="loop" width="100%">
+                                <source src="./video/horsejump-high_depth-da2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="cmpcontent">
+                            <video muted autoplay="autoplay" loop="loop" width="100%">
+                                <source src="./video/horsejump-high_depth-ours.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="twoitem">
+                    <video muted autoplay="autoplay" loop="loop" width="100%">
+                        <source src="./video/horsejump-high.mp4" type="video/mp4">
+                    </video>
+                    <div class="twentytwenty-container twentytwenty-container-bottom">
+                        <div class="cmpcontent">
+                            <video muted autoplay="autoplay" loop="loop" width="100%">
+                                <source src="./video/horsejump-high_depth-da2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="cmpcontent">
+                            <video muted autoplay="autoplay" loop="loop" width="100%">
+                                <source src="./video/horsejump-high_depth-ours.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="twoitem">
+                    <video muted autoplay="autoplay" loop="loop" width="100%">
+                        <source src="./video/horsejump-high.mp4" type="video/mp4">
+                    </video>
+                    <div class="twentytwenty-container twentytwenty-container-bottom">
+                        <div class="cmpcontent">
+                            <video muted autoplay="autoplay" loop="loop" width="100%">
+                                <source src="./video/horsejump-high_depth-da2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="cmpcontent">
+                            <video muted autoplay="autoplay" loop="loop" width="100%">
+                                <source src="./video/horsejump-high_depth-ours.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<script>
+    $(window).on('load', function() {
+        bulmaCarousel.attach('#comparison-carousel-horizontal', {
+            slidesToScroll: 1,
+            slidesToShow: 2,
+            loop: true,
+            autoplay: true,
+        });
+
+        $(".twentytwenty-container-bottom").twentytwenty({
+            before_label: 'Depth-Anything-V2',
+            after_label: 'Ours',
+            default_offset_pct: 0.3,
+            no_overlay: false,
+            // move_slider_on_hover: true,
+        });
+
+    });
+</script>
+
+
+
+<section class="hero teaser is-light is-small">
+    <div class="hero-body">
+
+        <div class="container" style="text-align: center; ">
+            <h2 class="title is-3">Novel view rendering </h2>
+            <div id="nvs-carousel-horizontal" class="carousel results-carousel">
+
+                <div class="twentytwenty-container twentytwenty-container-nvs">
+                    <div class="cmpcontent">
+                        <video muted autoplay="autoplay" loop="loop" width="100%">
+                            <source src="./video/camel_rgb.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="cmpcontent">
+                        <video muted autoplay="autoplay" loop="loop" width="100%">
+                            <source src="./video/camel_nvs.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <div class="twentytwenty-container twentytwenty-container-nvs">
+                    <div class="cmpcontent">
+                        <video muted autoplay="autoplay" loop="loop" width="100%">
+                            <source src="./video/camel_rgb.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="cmpcontent">
+                        <video muted autoplay="autoplay" loop="loop" width="100%">
+                            <source src="./video/camel_nvs.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <div class="twentytwenty-container twentytwenty-container-nvs">
+                    <div class="cmpcontent">
+                        <video muted autoplay="autoplay" loop="loop" width="100%">
+                            <source src="./video/camel_rgb.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="cmpcontent">
+                        <video muted autoplay="autoplay" loop="loop" width="100%">
+                            <source src="./video/camel_nvs.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<script>
+    $(window).on('load', function() {
+        bulmaCarousel.attach('#nvs-carousel-horizontal', {
+            slidesToScroll: 1,
+            slidesToShow: 2,
+            loop: true,
+            autoplay: true,
+        });
+
+        $(".twentytwenty-container-nvs").twentytwenty({
+            before_label: 'Input view',
+            after_label: 'Novel view',
+            default_offset_pct: 0.3,
+            no_overlay: false,
+            // move_slider_on_hover: true,
+        });
+
+    });
+</script>
+
+<section class="hero teaser is-light is-small">
+    <div class="hero-body">
+
+        <div class="container" style="text-align: center; ">
+            <h2 class="title is-3">Visual effects </h2>
+            <div id="editting-carousel-horizontal" class="carousel results-carousel">
+
+
+                <div class="twoitem">
+                    <video muted autoplay="autoplay" loop="loop" width="100%">
+                        <source src="./video/horsejump-high.mp4" type="video/mp4">
+                    </video>
+                    <div class="twentytwenty-container twentytwenty-container-editting">
+                        <div class="cmpcontent">
+                            <video muted autoplay="autoplay" loop="loop" width="100%">
+                                <source src="./video/editing/horsejump-high-DepthAnything_Add%20Fog.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="cmpcontent">
+                            <video muted autoplay="autoplay" loop="loop" width="100%">
+                                <source src="./video/editing/horsejump-high_Add%20Fog.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="twoitem">
+                    <video muted autoplay="autoplay" loop="loop" width="100%">
+                        <source src="./video/horsejump-high.mp4" type="video/mp4">
+                    </video>
+                    <div class="twentytwenty-container twentytwenty-container-editting">
+                        <div class="cmpcontent">
+                            <video muted autoplay="autoplay" loop="loop" width="100%">
+                                <source src="./video/editing/horsejump-high-DepthAnything_Depth%20Matte.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="cmpcontent">
+                            <video muted autoplay="autoplay" loop="loop" width="100%">
+                                <source src="./video/editing/horsejump-high_Depth%20Matte.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="twoitem">
+                    <video muted autoplay="autoplay" loop="loop" width="100%">
+                        <source src="./video/horsejump-high.mp4" type="video/mp4">
+                    </video>
+                    <div class="twentytwenty-container twentytwenty-container-editting">
+                        <div class="cmpcontent">
+                            <video muted autoplay="autoplay" loop="loop" width="100%">
+                                <source src="./video/editing/horsejump-high_DepthAnything_Depth%20Scan.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="cmpcontent">
+                            <video muted autoplay="autoplay" loop="loop" width="100%">
+                                <source src="./video/editing/horsejump-high_Depth%20Scan.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="twoitem">
+                    <video muted autoplay="autoplay" loop="loop" width="100%">
+                        <source src="./video/horsejump-high.mp4" type="video/mp4">
+                    </video>
+                    <div class="twentytwenty-container twentytwenty-container-editting">
+                        <div class="cmpcontent">
+                            <video muted autoplay="autoplay" loop="loop" width="100%">
+                                <source src="./video/editing/horsejump-high_DepthAnything_Editing.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="cmpcontent">
+                            <video muted autoplay="autoplay" loop="loop" width="100%">
+                                <source src="./video/editing/horsejump-high_Ours_editing.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<script>
+    $(window).on('load', function() {
+        bulmaCarousel.attach('#editting-carousel-horizontal', {
+            slidesToScroll: 1,
+            slidesToShow: 2,
+            loop: true,
+            autoplay: true,
+        });
+
+        $(".twentytwenty-container-editting").twentytwenty({
+            before_label: 'W/ Depth-Anything-V2',
+            after_label: 'W/ Ours',
+            default_offset_pct: 0.3,
+            no_overlay: false,
+            // move_slider_on_hover: true,
+        });
+
+    });
+</script>
+
+
+
+<section class="hero teaser" id="BibTeX">
+    <div class="hero-body">
+        <div class="column is-three-fifths" style=" margin-top: 30px; margin-bottom: 20px;">
+            <h2 class="title is-3">BibTeX</h2>
+            <pre><code>@inproceedings{hu2024-DepthCrafter,
+            author      = {Hu, Wenbo and Wang, Yuling and Ma, Lin and Yang, Bangbang and Gao, Lin and Liu, Xiao and Ma, Yuewen},
+            title       = {Tri-MipRF: Tri-Mip Representation for Efficient Anti-Aliasing Neural Radiance Fields},
+            booktitle   = {ICCV},
+            year        = {2023}
+    }</code></pre>
+        </div>
+    </div>
+</section>
+
+
+<footer class="footer">
+    <div class="hero-body">
+        <div class="columns is-two-fifths is-centered">
+            <div class="column is-8">
+                <div class="content">
+                    <p>
+                        Website template credit to <a
+                            href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, and is licensed under a <a rel="license"
+                                                                                                                        href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                        Commons Attribution-ShareAlike 4.0 International License</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
