@@ -159,25 +159,90 @@
         <div class="container" style="text-align: left; ">
             <div id="results-carousel-horizontal" class="carousel results-carousel">
 
+
+                <!--                DAVIS-->
                 <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
-                    <source src="./video/bus.mp4" type="video/mp4">
+                    <source src="./video/showcase/horsejump-high.mp4" type="video/mp4">
                 </video>
                 <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
-                    <source src="./video/car-turn.mp4" type="video/mp4">
+                    <source src="./video/showcase/parkour.mp4" type="video/mp4">
+                </video>
+
+                <!--                Sora videos-->
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="./video/showcase/sora_birthday.mp4" type="video/mp4">
                 </video>
                 <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
-                    <source src="./video/bus.mp4" type="video/mp4">
+                    <source src="./video/showcase/sora_dancing-kangaroo.mp4" type="video/mp4">
                 </video>
                 <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
-                    <source src="./video/car-turn.mp4" type="video/mp4">
+                    <source src="./video/showcase/sora_flower-blooming.mp4" type="video/mp4">
                 </video>
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="./video/showcase/sora_Wooly-Mammoth.mp4" type="video/mp4">
+                </video>
+
+
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="./video/showcase/example_4511004.mp4" type="video/mp4">
+                </video>
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="./video/showcase/example_4978746.mp4" type="video/mp4">
+                </video>
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="./video/showcase/example_5359969.mp4" type="video/mp4">
+                </video>
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="./video/showcase/example_5385813.mp4" type="video/mp4">
+                </video>
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="./video/showcase/example_5927704.mp4" type="video/mp4">
+                </video>
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="./video/showcase/example_5548030.mp4" type="video/mp4">
+                </video>
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="./video/showcase/example_5927704.mp4" type="video/mp4">
+                </video>
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="./video/showcase/example_8398057.mp4" type="video/mp4">
+                </video>
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="./video/showcase/example_10714343.mp4" type="video/mp4">
+                </video>
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="./video/showcase/example_19550565.mp4" type="video/mp4">
+                </video>
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="./video/showcase/example_cmatrix.mp4" type="video/mp4">
+                </video>
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="./video/showcase/example_video7.mp4" type="video/mp4">
+                </video>
+
+
+                <!--                Cartoon videos-->
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="./video/showcase/cartoon_haar_02.mp4" type="video/mp4">
+                </video>
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="./video/showcase/cartoon_qian2.mp4" type="video/mp4">
+                </video>
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="./video/showcase/cartoon_wukong2.mp4" type="video/mp4">
+                </video>
+                <!--                Game videos-->
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="./video/showcase/game__jingubang.mp4" type="video/mp4">
+                </video>
+
 
             </div>
 
             <div class="content has-text-justified" style="margin-top: 15px;">
-                We innovate <b>DepthCrafter</b>, a novel approach for open-world video depth estimation, by repurposing video diffusion models. It
-                can produce temporally consistent high-quality depth sequences for videos of arbitrary length, without requiring any additional information
-                such as camera poses or optical flow.
+                We innovate <b>DepthCrafter</b>, a novel open-world video depth estimation approach, by repurposing video diffusion models.
+                It can produce temporally consistent depth sequences with fine-grained details for videos of arbitrary length,
+                without requiring additional information such as camera poses or optical flow.
             </div>
 
         </div>
@@ -263,31 +328,31 @@
                     <div class="content has-text-justified">
 
                         <b>Motivation.</b>
-                        Despite significant progress in monocular depth estimation for static images, open-domain video depth estimation remains extremely challenging due to the temporal consistency, difficulties in estimating camera pose, variable content type and video length.
-
-                        We present DepthCrafter, an innovative method for estimating temporally consistent high-quality depth sequences for open-domain monocular videos of arbitrary length, without requiring any additional information such as camera poses or optical flow.
-
-                        DepthCrafter repurposes an image-to-video diffusion model to a video-to-depth model by fine-tuning a pre-trained model using carefully compiled paired RGB and depth sequence datasets in both synthetic and realistic styles, which harvests both precise depth details and variety of video content.
-
-                        A two-stage training strategy is designed to provide a long temporal context for precise depth estimation, while an inference strategy stitches multiple estimated depth sequences together, enabling depth estimation for videos of arbitrary length.
+                        Despite considerable advancements in monocular depth estimation for static images,
+                        estimating depth for open-world videos remains extremely challenging due to the temporal inconsistency,
+                        camera pose estimation difficulties, and diversity in content type and video length.
+                        We present DepthCrafter, an innovative method for estimating temporally consistent depth sequences with intricate details from open-world monocular videos of arbitrary length,
+                        without requiring any supplementary information such as camera poses or optical flow.
+                        DepthCrafter repurposes an image-to-video diffusion model into a video-to-depth model through our meticulously designed three-stage training strategy and compiled paired video-depth datasets.
+                        Our training approach enables the model to capture both precise depth details and rich content diversity
+                        from realistic and synthetic datasets while maintaining a long temporal context for accurately arranging depth distributions throughout the video.
+                        We also propose an inference strategy that processes videos of arbitrary length through segment-wise estimation and seamless stitching.
 
                         <div class="hero-body" style="margin-top: 40px; margin-bottom: -30px;">
-                            <img id="overview" width="90%" src="./img/overview.jpg"/>
+                            <img id="overview" width="70%" src="./img/overview.jpg"/>
                         </div>
                         <b>Overview.</b>
-                        DepthCrafter is a conditional diffusion generation model that models the distribution $p(\mathbf{d} \, | \, \mathbf{v})$ over the depth sequence $\mathbf{d}$ conditioned on the input video $\mathbf{v}$.
-                        The model is trained on paried video-depth datasets via the denoising score matching.
-                        During inference, given an open-world monocular video, it can generate temporally consistent high-quality depth sequences for the entire video from initialize Gaussian noise,
-                        without requiring any other information, \eg, camera poses, optical flow, \etc.
+                        DepthCrafter is a conditional diffusion generation model that models the distribution over the depth sequence conditioned on the input video.
+                        The model is trained on paired video-depth datasets via the denoising score matching.
+                        During inference, given an open-world monocular video, it can generate temporally consistent high-quality depth sequences for the entire video from initialized Gaussian noise,
+                        without requiring any additional information such as camera poses or optical flow.
 
                         <div class="hero-body" style="margin-top: 40px; margin-bottom: -30px;">
-                            <img id="inference" width="40%" src="./img/inference.jpg"/>
+                            <img id="inference" width="35%" src="./img/inference.jpg"/>
                         </div>
                         <b>Inference for videos of arbitrary lengths.</b>
                          We divide the video into overlapped segments and estimate the depth sequences for each segment with a carefully designed noise initialization strategy to anchor the scale
                         and shift of depth distributions. We further craft a mortise-and-tenon style latent interpolation strategy to stitch consecutive segments together seamlessly.
-                        The overlapped frames are denoted as ${o}_i$ and the interpolation weights for each frame are denoted as ${w}_i$ and $1-{w}_{i}$, respectively.
-
                     </div>
                 </div>
 
@@ -307,17 +372,17 @@
 
                 <div class="twoitem">
                     <video muted autoplay="autoplay" loop="loop" width="100%">
-                        <source src="./video/horsejump-high.mp4" type="video/mp4">
+                        <source src="video/comparison/horsejump-high.mp4" type="video/mp4">
                     </video>
                     <div class="twentytwenty-container twentytwenty-container-bottom">
                         <div class="cmpcontent">
                             <video muted autoplay="autoplay" loop="loop" width="100%">
-                                <source src="./video/horsejump-high_depth-da2.mp4" type="video/mp4">
+                                <source src="video/comparison/horsejump-high-da2.mp4" type="video/mp4">
                             </video>
                         </div>
                         <div class="cmpcontent">
                             <video muted autoplay="autoplay" loop="loop" width="100%">
-                                <source src="./video/horsejump-high_depth-ours.mp4" type="video/mp4">
+                                <source src="video/comparison/horsejump-high-ours.mp4" type="video/mp4">
                             </video>
                         </div>
                     </div>
@@ -325,17 +390,17 @@
 
                 <div class="twoitem">
                     <video muted autoplay="autoplay" loop="loop" width="100%">
-                        <source src="./video/horsejump-high.mp4" type="video/mp4">
+                        <source src="video/comparison/camel.mp4" type="video/mp4">
                     </video>
                     <div class="twentytwenty-container twentytwenty-container-bottom">
                         <div class="cmpcontent">
                             <video muted autoplay="autoplay" loop="loop" width="100%">
-                                <source src="./video/horsejump-high_depth-da2.mp4" type="video/mp4">
+                                <source src="video/comparison/camel-da2.mp4" type="video/mp4">
                             </video>
                         </div>
                         <div class="cmpcontent">
                             <video muted autoplay="autoplay" loop="loop" width="100%">
-                                <source src="./video/horsejump-high_depth-ours.mp4" type="video/mp4">
+                                <source src="video/comparison/camel-ours.mp4" type="video/mp4">
                             </video>
                         </div>
                     </div>
@@ -343,21 +408,156 @@
 
                 <div class="twoitem">
                     <video muted autoplay="autoplay" loop="loop" width="100%">
-                        <source src="./video/horsejump-high.mp4" type="video/mp4">
+                        <source src="video/comparison/closeup-main_combined.mp4" type="video/mp4">
                     </video>
                     <div class="twentytwenty-container twentytwenty-container-bottom">
                         <div class="cmpcontent">
                             <video muted autoplay="autoplay" loop="loop" width="100%">
-                                <source src="./video/horsejump-high_depth-da2.mp4" type="video/mp4">
+                                <source src="video/comparison/closeup-main_combined-da2.mp4" type="video/mp4">
                             </video>
                         </div>
                         <div class="cmpcontent">
                             <video muted autoplay="autoplay" loop="loop" width="100%">
-                                <source src="./video/horsejump-high_depth-ours.mp4" type="video/mp4">
+                                <source src="video/comparison/closeup-main_combined-ours.mp4" type="video/mp4">
                             </video>
                         </div>
                     </div>
                 </div>
+
+                <div class="twoitem">
+                    <video muted autoplay="autoplay" loop="loop" width="100%">
+                        <source src="video/comparison/5442785-hd_1920_1080_25fps_combined.mp4" type="video/mp4">
+                    </video>
+                    <div class="twentytwenty-container twentytwenty-container-bottom">
+                        <div class="cmpcontent">
+                            <video muted autoplay="autoplay" loop="loop" width="100%">
+                                <source src="video/comparison/5442785-hd_1920_1080_25fps_combined-da2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="cmpcontent">
+                            <video muted autoplay="autoplay" loop="loop" width="100%">
+                                <source src="video/comparison/5442785-hd_1920_1080_25fps_combined-ours.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="twoitem">
+                    <video muted autoplay="autoplay" loop="loop" width="100%">
+                        <source src="video/comparison/5446310-hd_1920_1080_30fps_combined.mp4" type="video/mp4">
+                    </video>
+                    <div class="twentytwenty-container twentytwenty-container-bottom">
+                        <div class="cmpcontent">
+                            <video muted autoplay="autoplay" loop="loop" width="100%">
+                                <source src="video/comparison/5446310-hd_1920_1080_30fps_combined-da2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="cmpcontent">
+                            <video muted autoplay="autoplay" loop="loop" width="100%">
+                                <source src="video/comparison/5446310-hd_1920_1080_30fps_combined-ours.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="twoitem">
+                    <video muted autoplay="autoplay" loop="loop" width="100%">
+                        <source src="video/comparison/10714343-hd_3840_2160_30fps_combined.mp4" type="video/mp4">
+                    </video>
+                    <div class="twentytwenty-container twentytwenty-container-bottom">
+                        <div class="cmpcontent">
+                            <video muted autoplay="autoplay" loop="loop" width="100%">
+                                <source src="video/comparison/10714343-hd_3840_2160_30fps_combined-da2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="cmpcontent">
+                            <video muted autoplay="autoplay" loop="loop" width="100%">
+                                <source src="video/comparison/10714343-hd_3840_2160_30fps_combined-ours.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="twoitem">
+                    <video muted autoplay="autoplay" loop="loop" width="100%">
+                        <source src="video/comparison/longmao_02_combined.mp4" type="video/mp4">
+                    </video>
+                    <div class="twentytwenty-container twentytwenty-container-bottom">
+                        <div class="cmpcontent">
+                            <video muted autoplay="autoplay" loop="loop" width="100%">
+                                <source src="video/comparison/longmao_02_combined-da2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="cmpcontent">
+                            <video muted autoplay="autoplay" loop="loop" width="100%">
+                                <source src="video/comparison/longmao_02_combined-ours.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="twoitem">
+                    <video muted autoplay="autoplay" loop="loop" width="100%">
+                        <source src="video/comparison/wukong2_combined.mp4" type="video/mp4">
+                    </video>
+                    <div class="twentytwenty-container twentytwenty-container-bottom">
+                        <div class="cmpcontent">
+                            <video muted autoplay="autoplay" loop="loop" width="100%">
+                                <source src="video/comparison/wukong2_combined-da2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="cmpcontent">
+                            <video muted autoplay="autoplay" loop="loop" width="100%">
+                                <source src="video/comparison/wukong2_combined-ours.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="twoitem">
+                    <video muted autoplay="autoplay" loop="loop" width="100%">
+                        <source src="video/comparison/wukong_combined.mp4" type="video/mp4">
+                    </video>
+                    <div class="twentytwenty-container twentytwenty-container-bottom">
+                        <div class="cmpcontent">
+                            <video muted autoplay="autoplay" loop="loop" width="100%">
+                                <source src="video/comparison/wukong_combined-da2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="cmpcontent">
+                            <video muted autoplay="autoplay" loop="loop" width="100%">
+                                <source src="video/comparison/wukong_combined-ours.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="twoitem">
+                    <img id="cmp1" width="100%" src="./img/img01.jpg"/>
+
+                    <div class="twentytwenty-container twentytwenty-container-bottom">
+                        <div class="cmpcontent">
+                            <img id="cmp1-da2" width="100%" src="./img/img01-da2.png"/>
+                        </div>
+                        <div class="cmpcontent">
+                            <img id="cmp1-ours" width="100%" src="./img/img01-ours.png"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="twoitem">
+                    <img id="cmp2" width="100%" src="./img/img02.jpg"/>
+
+                    <div class="twentytwenty-container twentytwenty-container-bottom">
+                        <div class="cmpcontent">
+                            <img id="cmp2-da2" width="100%" src="./img/img02-da2.png"/>
+                        </div>
+                        <div class="cmpcontent">
+                            <img id="cmp2-ours" width="100%" src="./img/img02-ours.png"/>
+                        </div>
+                    </div>
+                </div>
+
+
 
 
             </div>
@@ -399,41 +599,172 @@
                 <div class="twentytwenty-container twentytwenty-container-nvs">
                     <div class="cmpcontent">
                         <video muted autoplay="autoplay" loop="loop" width="100%">
-                            <source src="./video/camel_rgb.mp4" type="video/mp4">
+                            <source src="./video/nvs/12_hideandseek_rgb.mp4" type="video/mp4">
                         </video>
                     </div>
                     <div class="cmpcontent">
                         <video muted autoplay="autoplay" loop="loop" width="100%">
-                            <source src="./video/camel_nvs.mp4" type="video/mp4">
+                            <source src="video/nvs/12_hideandseek_nvs.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="twentytwenty-container twentytwenty-container-nvs">
+                    <div class="cmpcontent">
+                        <video muted autoplay="autoplay" loop="loop" width="100%">
+                            <source src="./video/nvs/13_butterfly_rgb.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="cmpcontent">
+                        <video muted autoplay="autoplay" loop="loop" width="100%">
+                            <source src="video/nvs/13_butterfly_nvs.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="twentytwenty-container twentytwenty-container-nvs">
+                    <div class="cmpcontent">
+                        <video muted autoplay="autoplay" loop="loop" width="100%">
+                            <source src="./video/comparison/camel.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="cmpcontent">
+                        <video muted autoplay="autoplay" loop="loop" width="100%">
+                            <source src="video/nvs/camel_nvs.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="twentytwenty-container twentytwenty-container-nvs">
+                    <div class="cmpcontent">
+                        <video muted autoplay="autoplay" loop="loop" width="100%">
+                            <source src="./video/comparison/horsejump-high.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="cmpcontent">
+                        <video muted autoplay="autoplay" loop="loop" width="100%">
+                            <source src="video/nvs/horsejump-high_nvs.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="twentytwenty-container twentytwenty-container-nvs">
+                    <div class="cmpcontent">
+                        <video muted autoplay="autoplay" loop="loop" width="100%">
+                            <source src="./video/nvs/4154539-uhd_3840_2160_24fps_rgb.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="cmpcontent">
+                        <video muted autoplay="autoplay" loop="loop" width="100%">
+                            <source src="video/nvs/4154539-uhd_3840_2160_24fps_nvs.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="twentytwenty-container twentytwenty-container-nvs">
+                    <div class="cmpcontent">
+                        <video muted autoplay="autoplay" loop="loop" width="100%">
+                            <source src="./video/nvs/4158877-uhd_3840_2160_30fps_rgb.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="cmpcontent">
+                        <video muted autoplay="autoplay" loop="loop" width="100%">
+                            <source src="video/nvs/4158877-uhd_3840_2160_30fps_nvs.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="twentytwenty-container twentytwenty-container-nvs">
+                    <div class="cmpcontent">
+                        <video muted autoplay="autoplay" loop="loop" width="100%">
+                            <source src="./video/nvs/4511004-uhd_3840_2160_24fps_rgb.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="cmpcontent">
+                        <video muted autoplay="autoplay" loop="loop" width="100%">
+                            <source src="video/nvs/4511004-uhd_3840_2160_24fps_nvs.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="twentytwenty-container twentytwenty-container-nvs">
+                    <div class="cmpcontent">
+                        <video muted autoplay="autoplay" loop="loop" width="100%">
+                            <source src="./video/nvs/4727645-uhd_3840_2160_25fps_rgb.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="cmpcontent">
+                        <video muted autoplay="autoplay" loop="loop" width="100%">
+                            <source src="video/nvs/4727645-uhd_3840_2160_25fps_nvs.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="twentytwenty-container twentytwenty-container-nvs">
+                    <div class="cmpcontent">
+                        <video muted autoplay="autoplay" loop="loop" width="100%">
+                            <source src="./video/nvs/5385813-hd_1920_1080_25fps_rgb.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="cmpcontent">
+                        <video muted autoplay="autoplay" loop="loop" width="100%">
+                            <source src="video/nvs/5385813-hd_1920_1080_25fps_nvs.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="twentytwenty-container twentytwenty-container-nvs">
+                    <div class="cmpcontent">
+                        <video muted autoplay="autoplay" loop="loop" width="100%">
+                            <source src="./video/nvs/birthday_rgb.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="cmpcontent">
+                        <video muted autoplay="autoplay" loop="loop" width="100%">
+                            <source src="video/nvs/birthday_nvs.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="twentytwenty-container twentytwenty-container-nvs">
+                    <div class="cmpcontent">
+                        <video muted autoplay="autoplay" loop="loop" width="100%">
+                            <source src="./video/nvs/cmatrix_rgb.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="cmpcontent">
+                        <video muted autoplay="autoplay" loop="loop" width="100%">
+                            <source src="video/nvs/cmatrix_nvs.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="twentytwenty-container twentytwenty-container-nvs">
+                    <div class="cmpcontent">
+                        <video muted autoplay="autoplay" loop="loop" width="100%">
+                            <source src="./video/nvs/longmao_01_rgb.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="cmpcontent">
+                        <video muted autoplay="autoplay" loop="loop" width="100%">
+                            <source src="video/nvs/longmao_01_nvs.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="twentytwenty-container twentytwenty-container-nvs">
+                    <div class="cmpcontent">
+                        <video muted autoplay="autoplay" loop="loop" width="100%">
+                            <source src="./video/nvs/Tokyo-Walk_rgb.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="cmpcontent">
+                        <video muted autoplay="autoplay" loop="loop" width="100%">
+                            <source src="video/nvs/Tokyo-Walk_nvs.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="twentytwenty-container twentytwenty-container-nvs">
+                    <div class="cmpcontent">
+                        <video muted autoplay="autoplay" loop="loop" width="100%">
+                            <source src="./video/nvs/wukong2_rgb.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="cmpcontent">
+                        <video muted autoplay="autoplay" loop="loop" width="100%">
+                            <source src="video/nvs/wukong2_nvs.mp4" type="video/mp4">
                         </video>
                     </div>
                 </div>
 
-                <div class="twentytwenty-container twentytwenty-container-nvs">
-                    <div class="cmpcontent">
-                        <video muted autoplay="autoplay" loop="loop" width="100%">
-                            <source src="./video/camel_rgb.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="cmpcontent">
-                        <video muted autoplay="autoplay" loop="loop" width="100%">
-                            <source src="./video/camel_nvs.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                </div>
-
-                <div class="twentytwenty-container twentytwenty-container-nvs">
-                    <div class="cmpcontent">
-                        <video muted autoplay="autoplay" loop="loop" width="100%">
-                            <source src="./video/camel_rgb.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="cmpcontent">
-                        <video muted autoplay="autoplay" loop="loop" width="100%">
-                            <source src="./video/camel_nvs.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                </div>
 
 
             </div>
@@ -473,7 +804,7 @@
 
                 <div class="twoitem">
                     <video muted autoplay="autoplay" loop="loop" width="100%">
-                        <source src="./video/horsejump-high.mp4" type="video/mp4">
+                        <source src="video/comparison/horsejump-high.mp4" type="video/mp4">
                     </video>
                     <div class="twentytwenty-container twentytwenty-container-editting">
                         <div class="cmpcontent">
@@ -491,7 +822,7 @@
 
                 <div class="twoitem">
                     <video muted autoplay="autoplay" loop="loop" width="100%">
-                        <source src="./video/horsejump-high.mp4" type="video/mp4">
+                        <source src="video/comparison/horsejump-high.mp4" type="video/mp4">
                     </video>
                     <div class="twentytwenty-container twentytwenty-container-editting">
                         <div class="cmpcontent">
@@ -509,7 +840,7 @@
 
                 <div class="twoitem">
                     <video muted autoplay="autoplay" loop="loop" width="100%">
-                        <source src="./video/horsejump-high.mp4" type="video/mp4">
+                        <source src="video/comparison/horsejump-high.mp4" type="video/mp4">
                     </video>
                     <div class="twentytwenty-container twentytwenty-container-editting">
                         <div class="cmpcontent">
@@ -527,7 +858,7 @@
 
                 <div class="twoitem">
                     <video muted autoplay="autoplay" loop="loop" width="100%">
-                        <source src="./video/horsejump-high.mp4" type="video/mp4">
+                        <source src="video/comparison/horsejump-high.mp4" type="video/mp4">
                     </video>
                     <div class="twentytwenty-container twentytwenty-container-editting">
                         <div class="cmpcontent">
@@ -578,11 +909,11 @@
     <div class="hero-body">
         <div class="column is-three-fifths" style=" margin-top: 30px; margin-bottom: 20px;">
             <h2 class="title is-3">BibTeX</h2>
-            <pre><code>@inproceedings{hu2024-DepthCrafter,
-            author      = {Hu, Wenbo and Wang, Yuling and Ma, Lin and Yang, Bangbang and Gao, Lin and Liu, Xiao and Ma, Yuewen},
-            title       = {Tri-MipRF: Tri-Mip Representation for Efficient Anti-Aliasing Neural Radiance Fields},
-            booktitle   = {ICCV},
-            year        = {2023}
+            <pre><code>@article{hu2024-DepthCrafter,
+            author      = {Hu, Wenbo and Gao, Xiangjun and Li, Xiaoyu and Zhao, Sijie and Cun, Xiaodong and Zhang, Yong and Quan, Long and Shan, Ying},
+            title       = {DepthCrafter: Repurposing Video Diffusion Models for Open-world Video Depth Estimation},
+            journal     = {arXiv preprint arXiv:2409.xxxxx},
+            year        = {2024}
     }</code></pre>
         </div>
     </div>
