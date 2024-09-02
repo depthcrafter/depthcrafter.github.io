@@ -50,15 +50,21 @@
 <body>
 
 
-<section class="hero teaser">
+<section class="hero teaser ">
     <div class="hero-body">
         <div class="container is-max-desktop">
             <div class="columns is-centered">
                 <div class="column has-text-centered ">
-                    <img src="img/logo.png" style="height:300px"></img>
-                    <h1 class="title is-1 publication-title">
-                        Repurposing Video Diffusion Models for Open-world Video Depth Estimation
-                    </h1>
+                    <div class="header-container" style="display: flex; flex-direction: column; align-items: center;">
+                        <img src="img/logo.png" style="height:170px; margin-bottom: -10px;"></img>
+                        <h1 class="title is-1 publication-title">
+                            Repurposing Video Diffusion Models for Open-world Video Depth Estimation
+                        </h1>
+                    </div>
+<!--                    <img src="img/logo.png" style="height:160px"></img>-->
+<!--                    <h1 class="title is-1 publication-title">-->
+<!--                        Repurposing Video Diffusion Models for Open-world Video Depth Estimation-->
+<!--                    </h1>-->
 <!--                    <h2 class="title publication-title is-4 has-text-grey"> ICCV 2023 (Oral, Best Paper Finalist)</h2>-->
                     <h2 class="title publication-title is-4 has-text-grey"> arXiv 2024</h2>
                     <div class="is-size-5 publication-authors">
@@ -202,9 +208,6 @@
                     <source src="./video/showcase/example_5548030.mp4" type="video/mp4">
                 </video>
                 <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
-                    <source src="./video/showcase/example_5927704.mp4" type="video/mp4">
-                </video>
-                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
                     <source src="./video/showcase/example_8398057.mp4" type="video/mp4">
                 </video>
                 <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
@@ -257,14 +260,14 @@
             slidesToScroll: 1,
             slidesToShow: 1,
             loop: true,
-            autoplay: true,
+            autoplay: false,
         });
 
         bulmaCarousel.attach('#results-carousel-vertical', {
             slidesToScroll: 1,
             slidesToShow: 1,
             loop: true,
-            autoplay: true,
+            autoplay: false,
         });
 
     });
@@ -570,10 +573,10 @@
 <script>
     $(window).on('load', function() {
         bulmaCarousel.attach('#comparison-carousel-horizontal', {
-            slidesToScroll: 1,
+            slidesToScroll: 2,
             slidesToShow: 2,
             loop: true,
-            autoplay: true,
+            autoplay: false,
         });
 
         $(".twentytwenty-container-bottom").twentytwenty({
@@ -777,10 +780,10 @@
 <script>
     $(window).on('load', function() {
         bulmaCarousel.attach('#nvs-carousel-horizontal', {
-            slidesToScroll: 1,
+            slidesToScroll: 2,
             slidesToShow: 2,
             loop: true,
-            autoplay: true,
+            autoplay: false,
         });
 
         $(".twentytwenty-container-nvs").twentytwenty({
@@ -886,10 +889,10 @@
 <script>
     $(window).on('load', function() {
         bulmaCarousel.attach('#editting-carousel-horizontal', {
-            slidesToScroll: 1,
+            slidesToScroll: 2,
             slidesToShow: 2,
             loop: true,
-            autoplay: true,
+            autoplay: false,
         });
 
         $(".twentytwenty-container-editting").twentytwenty({
