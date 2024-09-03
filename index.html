@@ -300,7 +300,7 @@
                         We also propose an inference strategy that processes extremely long videos through segment-wise estimation and seamless stitching.
 
                         <div class="hero-body" style="margin-top: 40px; margin-bottom: -30px;">
-                            <img id="overview" width="70%" src="./img/overview.jpg"/>
+                            <img id="overview" width="90%" src="./img/overview.jpg"/>
                         </div>
                         <b>Overview.</b>
                         DepthCrafter is a conditional diffusion model that models
@@ -313,7 +313,7 @@
                         without requiring any supplementary information, such as camera poses or optical flow.
 
                         <div class="hero-body" style="margin-top: 40px; margin-bottom: -30px;">
-                            <img id="inference" width="35%" src="./img/inference.jpg"/>
+                            <img id="inference" width="45%" src="./img/inference.jpg"/>
                         </div>
                         <b>Inference for extremely long videos.</b>
                         We divide the video into overlapped segments and estimate the depth sequences for each segment
@@ -329,12 +329,61 @@
     </div>
 </section>
 
+<section class="hero teaser is-light is-small">
+    <div class="hero-body">
+        <div class="container" style="text-align: center; ">
+            <h2 class="title is-3">Comparison with representative methods on labeled datasets</h2>
+            <div id="cmp-gt-carousel-horizontal" class="carousel results-carousel">
+
+                <video muted autoplay="autoplay" loop="loop" width="90%" preload controls>
+                    <source src="./video/compare_with_gt/KITTI_01.mp4" type="video/mp4">
+                </video>
+                <video muted autoplay="autoplay" loop="loop" width="90%" preload controls>
+                    <source src="./video/compare_with_gt/KITTI_02.mp4" type="video/mp4">
+                </video>
+                <video muted autoplay="autoplay" loop="loop" width="90%" preload controls>
+                    <source src="./video/compare_with_gt/Sintel_01.mp4" type="video/mp4">
+                </video>
+                <video muted autoplay="autoplay" loop="loop" width="90%" preload controls>
+                    <source src="./video/compare_with_gt/Sintel_02.mp4" type="video/mp4">
+                </video>
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="./video/compare_with_gt/Scannet_01.mp4" type="video/mp4">
+                </video>
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="./video/compare_with_gt/Scannet_02.mp4" type="video/mp4">
+                </video>
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+                    <source src="./video/compare_with_gt/Bonn.mp4" type="video/mp4">
+                </video>
+
+
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+<script>
+    $(window).on('load', function () {
+        bulmaCarousel.attach('#cmp-gt-carousel-horizontal', {
+            slidesToScroll: 1,
+            slidesToShow: 1,
+            loop: true,
+            autoplay: false,
+        });
+
+    });
+</script>
+
+
 
 <section class="hero teaser is-light is-small">
     <div class="hero-body">
 
         <div class="container" style="text-align: center; ">
-            <h2 class="title is-3">Comparison with Depth-Anything-V2 </h2>
+            <h2 class="title is-3">Comparison with Depth-Anything-V2 on open-world videos</h2>
             <div id="comparison-carousel-horizontal" class="carousel results-carousel">
 
                 <div class="twoitem">
