@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta name="description"
           content=".">
-    <meta name="keywords" content="DepthCrafter, video depth estimation, monocular depth estimation, video, depth, open-world">
+    <meta name="keywords"
+          content="DepthCrafter, video depth estimation, monocular depth estimation, video, depth, open-world">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>DepthCrafter</title>
 
@@ -52,22 +53,21 @@
 
 <section class="hero teaser ">
     <div class="hero-body">
-        <div class="container is-max-desktop">
+        <div class="container is-max-desktop has-text-centered">
             <div class="columns is-centered">
                 <div class="column has-text-centered ">
-                    <div class="header-container" style="display: flex; flex-direction: column; align-items: center;">
-                        <img src="img/logo.png" style="height:170px; margin-bottom: -10px;"></img>
-                        <h1 class="title is-1 publication-title">
-                            Repurposing Video Diffusion Models for Open-world Video Depth Estimation
-                        </h1>
-                    </div>
-<!--                    <img src="img/logo.png" style="height:160px"></img>-->
-<!--                    <h1 class="title is-1 publication-title">-->
-<!--                        Repurposing Video Diffusion Models for Open-world Video Depth Estimation-->
-<!--                    </h1>-->
-<!--                    <h2 class="title publication-title is-4 has-text-grey"> ICCV 2023 (Oral, Best Paper Finalist)</h2>-->
+                    <img src="img/logo.png" style="height:170px; margin-bottom: -10px;"></img>
+                    <h1 class="title is-1 publication-title has-text-centered">
+                        Generating Consistent Long Depth Sequences for Open-world Videos
+                    </h1>
+                    <!--                    <img src="img/logo.png" style="height:160px"></img>-->
+                    <!--                    <h1 class="title is-1 publication-title">-->
+                    <!--                        Repurposing Video Diffusion Models for Open-world Video Depth Estimation-->
+                    <!--                    </h1>-->
+                    <!--                    <h2 class="title publication-title is-4 has-text-grey"> ICCV 2023 (Oral, Best Paper Finalist)</h2>-->
                     <h2 class="title publication-title is-4 has-text-grey"> arXiv 2024</h2>
                     <div class="is-size-5 publication-authors">
+
             <span class="author-block">
               <a href="https://wbhu.github.io">Wenbo Hu</a><sup>1* &dagger;</sup> </span>
                         <span class="author-block">
@@ -92,13 +92,14 @@
               <a href="https://home.cse.ust.hk/~quan">Long Quan</a><sup>2</sup>
             </span>
                         <span class="author-block">
-              <a href="https://scholar.google.com/citations?user=4oXBp9UAAAAJ&hl=en">Ying Shan</a><sup>1</sup>
+              <a href="https://scholar.google.com/citations?user=4oXBp9UAAAAJ&hl=en">Ying Shan</a><sup>3, 1</sup>
             </span>
                     </div>
 
                     <div class="is-size-5 publication-authors">
                         <span class="author-block"><sup>1</sup>Tencent AI Lab</span>
                         <span class="author-block"><sup>2</sup>The Hong Kong University of Science and Technology</span>
+                        <span class="author-block"><sup>3</sup>ARC Lab, Tencent PCG</span>
                     </div>
 
                     <div class="column has-text-centered">
@@ -243,8 +244,8 @@
             </div>
 
             <div class="content has-text-justified" style="margin-top: 15px;">
-                We innovate <b>DepthCrafter</b>, a novel open-world video depth estimation approach, by repurposing video diffusion models.
-                It can produce temporally consistent depth sequences with fine-grained details for videos of arbitrary length,
+                We innovate <b>DepthCrafter</b>, a novel video depth estimation approach, by leveraging video diffusion models.
+                It can generate temporally consistent long depth sequences with fine-grained details for open-world videos,
                 without requiring additional information such as camera poses or optical flow.
             </div>
 
@@ -253,9 +254,8 @@
 </section>
 
 
-
 <script>
-    $(window).on('load', function() {
+    $(window).on('load', function () {
         bulmaCarousel.attach('#results-carousel-horizontal', {
             slidesToScroll: 1,
             slidesToShow: 1,
@@ -274,51 +274,6 @@
 </script>
 
 
-<!--<section class="section">-->
-<!--    <div class="container is-max-desktop">-->
-<!--        &lt;!&ndash; Abstract. &ndash;&gt;-->
-<!--        <div class="columns is-centered has-text-centered">-->
-<!--            <div class="column is-four-fifths">-->
-<!--                <h2 class="title is-3">Abstract</h2>-->
-<!--                <div class="content has-text-justified">-->
-<!--                    <p>-->
-<!--                        Despite significant progress in monocular depth estimation for static images,-->
-<!--                        open-domain video depth estimation remains extremely challenging due to the temporal consistency,-->
-<!--                        difficulties in estimating camera pose, variable content type and video length.-->
-
-<!--                        We present DepthCrafter, an innovative method for estimating temporally consistent high-quality depth sequences for open-domain monocular videos of arbitrary length,-->
-<!--                        without requiring any additional information such as camera poses or optical flow.-->
-<!--                        %-->
-<!--                        DepthCrafter repurposes an image-to-video diffusion model to a video-to-depth model by fine-tuning a pre-trained model using carefully compiled paired RGB and depth sequence datasets in both synthetic and realistic styles, which harvests both precise depth details and variety of video content.-->
-<!--                        %-->
-<!--                        A two-stage training strategy is designed to provide a long temporal context for precise depth estimation, while an inference strategy stitches multiple estimated depth sequences together, enabling depth estimation for videos of arbitrary length.-->
-<!--                        %-->
-<!--                        Extensive evaluations on multiple datasets demonstrate that DepthCrafter achieves state-of-the-art performance of zero-shot video depth estimation in open-domain.-->
-<!--                        %-->
-<!--                        Furthermore, DepthCrafter facilitates various downstream applications such as \TODO{video editing, visual effects, novel view synthesis, and conditional video generation}.-->
-<!--                    </p>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        &lt;!&ndash;/ Abstract. &ndash;&gt;-->
-
-<!--        &lt;!&ndash;         Paper video.&ndash;&gt;-->
-<!--&lt;!&ndash;        <div class="columns is-centered has-text-centered">&ndash;&gt;-->
-<!--&lt;!&ndash;            <div class="column is-four-fifths">&ndash;&gt;-->
-<!--&lt;!&ndash;                <h2 class="title is-3">Video</h2>&ndash;&gt;-->
-<!--&lt;!&ndash;                <div class="publication-video">&ndash;&gt;-->
-<!--&lt;!&ndash;                    <iframe src="https://www.youtube.com/embed/eBgoul4F148"&ndash;&gt;-->
-<!--&lt;!&ndash;                            title="Tri-MipRF: Tri-Mip Representation for Efficient Anti-Aliasing Neural Radiance Fields"&ndash;&gt;-->
-<!--&lt;!&ndash;                            frameborder="0"&ndash;&gt;-->
-<!--&lt;!&ndash;                            allow="autoplay; encrypted-media; gyroscope; picture-in-picture; web-share"&ndash;&gt;-->
-<!--&lt;!&ndash;                            allowfullscreen></iframe>&ndash;&gt;-->
-<!--&lt;!&ndash;                </div>&ndash;&gt;-->
-<!--&lt;!&ndash;            </div>&ndash;&gt;-->
-<!--&lt;!&ndash;        </div>&ndash;&gt;-->
-<!--    </div>-->
-<!--</section>-->
-
-
 <br><br><br>
 
 <section class="hero teaser">
@@ -331,31 +286,40 @@
                     <div class="content has-text-justified">
 
                         <b>Motivation.</b>
-                        Despite considerable advancements in monocular depth estimation for static images,
-                        estimating depth for open-world videos remains extremely challenging due to the temporal inconsistency,
-                        camera pose estimation difficulties, and diversity in content type and video length.
-                        We present DepthCrafter, an innovative method for estimating temporally consistent depth sequences with intricate details from open-world monocular videos of arbitrary length,
+                        Despite significant advancements in monocular depth estimation for static images,
+                        estimating video depth in the open world remains challenging,
+                        since open-world videos are extremely diverse in content, motion, camera movement, and length.
+                        We present DepthCrafter, an innovative method for generating
+                        temporally consistent long depth sequences with intricate details for open-world videos,
                         without requiring any supplementary information such as camera poses or optical flow.
-                        DepthCrafter repurposes an image-to-video diffusion model into a video-to-depth model through our meticulously designed three-stage training strategy and compiled paired video-depth datasets.
-                        Our training approach enables the model to capture both precise depth details and rich content diversity
-                        from realistic and synthetic datasets while maintaining a long temporal context for accurately arranging depth distributions throughout the video.
-                        We also propose an inference strategy that processes videos of arbitrary length through segment-wise estimation and seamless stitching.
+                        DepthCrafter achieves generalization ability to open-world videos
+                        by training a video-to-depth model from a pre-trained image-to-video diffusion model,
+                        through our meticulously designed three-stage training strategy with the compiled paired video-depth datasets.
+                        Our training approach enables the model to generate depth sequences with variable lengths at one time, up to 110 frames,
+                        and harvest both precise depth details and rich content diversity from realistic and synthetic datasets.
+                        We also propose an inference strategy that processes extremely long videos through segment-wise estimation and seamless stitching.
 
                         <div class="hero-body" style="margin-top: 40px; margin-bottom: -30px;">
                             <img id="overview" width="70%" src="./img/overview.jpg"/>
                         </div>
                         <b>Overview.</b>
-                        DepthCrafter is a conditional diffusion generation model that models the distribution over the depth sequence conditioned on the input video.
-                        The model is trained on paired video-depth datasets via the denoising score matching.
-                        During inference, given an open-world monocular video, it can generate temporally consistent high-quality depth sequences for the entire video from initialized Gaussian noise,
-                        without requiring any additional information such as camera poses or optical flow.
+                        DepthCrafter is a conditional diffusion model that models
+                        the distribution over the depth sequence conditioned on the input video.
+                        We train the model in three stages,
+                        where the spatial or temporal layers of the diffusion model
+                        are progressively learned on our compiled realistic or synthetic datasets with variable lengths.
+                        During inference, given an open-world video, it can generate temporally consistent long depth
+                        sequences with fine-grained details for the entire video from initialized Gaussian noise,
+                        without requiring any supplementary information, such as camera poses or optical flow.
 
                         <div class="hero-body" style="margin-top: 40px; margin-bottom: -30px;">
                             <img id="inference" width="35%" src="./img/inference.jpg"/>
                         </div>
-                        <b>Inference for videos of arbitrary lengths.</b>
-                         We divide the video into overlapped segments and estimate the depth sequences for each segment with a carefully designed noise initialization strategy to anchor the scale
-                        and shift of depth distributions. We further craft a mortise-and-tenon style latent interpolation strategy to stitch consecutive segments together seamlessly.
+                        <b>Inference for extremely long videos.</b>
+                        We divide the video into overlapped segments and estimate the depth sequences for each segment
+                        with a noise initialization strategy to anchor the scale and shift of depth distributions.
+                        These estimated segments are then seamlessly stitched together with a latent interpolation strategy
+                        to form the entire depth sequence.
                     </div>
                 </div>
 
@@ -434,12 +398,14 @@
                     <div class="twentytwenty-container twentytwenty-container-bottom">
                         <div class="cmpcontent">
                             <video muted autoplay="autoplay" loop="loop" width="100%">
-                                <source src="video/comparison/5442785-hd_1920_1080_25fps_combined-da2.mp4" type="video/mp4">
+                                <source src="video/comparison/5442785-hd_1920_1080_25fps_combined-da2.mp4"
+                                        type="video/mp4">
                             </video>
                         </div>
                         <div class="cmpcontent">
                             <video muted autoplay="autoplay" loop="loop" width="100%">
-                                <source src="video/comparison/5442785-hd_1920_1080_25fps_combined-ours.mp4" type="video/mp4">
+                                <source src="video/comparison/5442785-hd_1920_1080_25fps_combined-ours.mp4"
+                                        type="video/mp4">
                             </video>
                         </div>
                     </div>
@@ -452,12 +418,14 @@
                     <div class="twentytwenty-container twentytwenty-container-bottom">
                         <div class="cmpcontent">
                             <video muted autoplay="autoplay" loop="loop" width="100%">
-                                <source src="video/comparison/5446310-hd_1920_1080_30fps_combined-da2.mp4" type="video/mp4">
+                                <source src="video/comparison/5446310-hd_1920_1080_30fps_combined-da2.mp4"
+                                        type="video/mp4">
                             </video>
                         </div>
                         <div class="cmpcontent">
                             <video muted autoplay="autoplay" loop="loop" width="100%">
-                                <source src="video/comparison/5446310-hd_1920_1080_30fps_combined-ours.mp4" type="video/mp4">
+                                <source src="video/comparison/5446310-hd_1920_1080_30fps_combined-ours.mp4"
+                                        type="video/mp4">
                             </video>
                         </div>
                     </div>
@@ -470,12 +438,14 @@
                     <div class="twentytwenty-container twentytwenty-container-bottom">
                         <div class="cmpcontent">
                             <video muted autoplay="autoplay" loop="loop" width="100%">
-                                <source src="video/comparison/10714343-hd_3840_2160_30fps_combined-da2.mp4" type="video/mp4">
+                                <source src="video/comparison/10714343-hd_3840_2160_30fps_combined-da2.mp4"
+                                        type="video/mp4">
                             </video>
                         </div>
                         <div class="cmpcontent">
                             <video muted autoplay="autoplay" loop="loop" width="100%">
-                                <source src="video/comparison/10714343-hd_3840_2160_30fps_combined-ours.mp4" type="video/mp4">
+                                <source src="video/comparison/10714343-hd_3840_2160_30fps_combined-ours.mp4"
+                                        type="video/mp4">
                             </video>
                         </div>
                     </div>
@@ -561,17 +531,14 @@
                 </div>
 
 
-
-
             </div>
         </div>
     </div>
 </section>
 
 
-
 <script>
-    $(window).on('load', function() {
+    $(window).on('load', function () {
         bulmaCarousel.attach('#comparison-carousel-horizontal', {
             slidesToScroll: 2,
             slidesToShow: 2,
@@ -589,7 +556,6 @@
 
     });
 </script>
-
 
 
 <section class="hero teaser is-light is-small">
@@ -769,16 +735,14 @@
                 </div>
 
 
-
             </div>
         </div>
     </div>
 </section>
 
 
-
 <script>
-    $(window).on('load', function() {
+    $(window).on('load', function () {
         bulmaCarousel.attach('#nvs-carousel-horizontal', {
             slidesToScroll: 2,
             slidesToShow: 2,
@@ -812,7 +776,8 @@
                     <div class="twentytwenty-container twentytwenty-container-editting">
                         <div class="cmpcontent">
                             <video muted autoplay="autoplay" loop="loop" width="100%">
-                                <source src="./video/editing/horsejump-high-DepthAnything_Add%20Fog.mp4" type="video/mp4">
+                                <source src="./video/editing/horsejump-high-DepthAnything_Add%20Fog.mp4"
+                                        type="video/mp4">
                             </video>
                         </div>
                         <div class="cmpcontent">
@@ -830,7 +795,8 @@
                     <div class="twentytwenty-container twentytwenty-container-editting">
                         <div class="cmpcontent">
                             <video muted autoplay="autoplay" loop="loop" width="100%">
-                                <source src="./video/editing/horsejump-high-DepthAnything_Depth%20Matte.mp4" type="video/mp4">
+                                <source src="./video/editing/horsejump-high-DepthAnything_Depth%20Matte.mp4"
+                                        type="video/mp4">
                             </video>
                         </div>
                         <div class="cmpcontent">
@@ -848,7 +814,8 @@
                     <div class="twentytwenty-container twentytwenty-container-editting">
                         <div class="cmpcontent">
                             <video muted autoplay="autoplay" loop="loop" width="100%">
-                                <source src="./video/editing/horsejump-high_DepthAnything_Depth%20Scan.mp4" type="video/mp4">
+                                <source src="./video/editing/horsejump-high_DepthAnything_Depth%20Scan.mp4"
+                                        type="video/mp4">
                             </video>
                         </div>
                         <div class="cmpcontent">
@@ -878,16 +845,14 @@
                 </div>
 
 
-
             </div>
         </div>
     </div>
 </section>
 
 
-
 <script>
-    $(window).on('load', function() {
+    $(window).on('load', function () {
         bulmaCarousel.attach('#editting-carousel-horizontal', {
             slidesToScroll: 2,
             slidesToShow: 2,
@@ -907,15 +872,14 @@
 </script>
 
 
-
 <section class="hero teaser" id="BibTeX">
     <div class="hero-body">
         <div class="column is-three-fifths" style=" margin-top: 30px; margin-bottom: 20px;">
             <h2 class="title is-3">BibTeX</h2>
             <pre><code>@article{hu2024-DepthCrafter,
             author      = {Hu, Wenbo and Gao, Xiangjun and Li, Xiaoyu and Zhao, Sijie and Cun, Xiaodong and Zhang, Yong and Quan, Long and Shan, Ying},
-            title       = {DepthCrafter: Repurposing Video Diffusion Models for Open-world Video Depth Estimation},
-            journal     = {arXiv preprint arXiv:2409.xxxxx},
+            title       = {DepthCrafter: Generating Consistent Long Depth Sequences for Open-world Videos},
+            journal     = {arXiv preprint arXiv:2409.5830545},
             year        = {2024}
     }</code></pre>
         </div>
@@ -930,8 +894,9 @@
                 <div class="content">
                     <p>
                         Website template credit to <a
-                            href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, and is licensed under a <a rel="license"
-                                                                                                                        href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                            href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, and is licensed under a <a
+                            rel="license"
+                            href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
                         Commons Attribution-ShareAlike 4.0 International License</a>.
                     </p>
                 </div>
